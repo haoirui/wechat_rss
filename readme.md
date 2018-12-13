@@ -1,4 +1,5 @@
 #微信RSS订阅
+
 ✅ 自定义关键词订阅
 
 ✅ 微信自动登录
@@ -22,7 +23,8 @@ Security Paper Team
 `config/wechat.php`修改此文件，配置成自己的公众号
 
 测试公众号：
- ![image](https://github.com/Nash-x9/wechat_rss/raw/master/0.jpeg)
+
+<img src="https://github.com/Nash-x9/wechat_rss/raw/master/0.jpeg" width="375" alt="测试公众号"/>
 
 ####执行安装
 ```bash
