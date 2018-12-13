@@ -29,6 +29,7 @@ Security Paper Team
 #### 执行安装
 ```bash
 comopser install
+php artisan key:generate
 php artisan migrate
 php artisan db:seed --class=RssListSeeder #导入默认采集源
 crontab -e
