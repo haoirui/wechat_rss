@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ url('/monitor') }}">
                 Security Paper
             </a>
         </div>
@@ -16,6 +16,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                @if(!is_null(Session::get('user')->headimgurl ?? null))
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
@@ -30,7 +31,7 @@
                         </li>
                     </ul>
                 </li>
-                </li>
+                @endif
             </ul>
         </div>
     </div>
