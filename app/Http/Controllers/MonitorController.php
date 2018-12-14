@@ -14,7 +14,7 @@ class MonitorController extends Controller
     public function index(Request $request)
     {
         //获取我订阅的关键词
-        $myRss = WechatUser::user()->myRss()->orderByDesc('created_at')
+        $myRss = WechatUser::user()->myRss()->orderByDesc('pub_dates')
                     ->paginate(10);
 
         return view('user.index',array_merge([
@@ -60,7 +60,7 @@ class MonitorController extends Controller
     public function articles(Request $request)
     {
         //获取所有的安全舆情
-        $myRss = (new Rss())->getRssList($request->input())->orderByDesc('created_at')
+        $myRss = (new Rss())->getRssList($request->input())->orderByDesc('pub_date')
             ->paginate(10);
 
         return view('user.articles',array_merge([
