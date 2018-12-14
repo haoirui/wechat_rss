@@ -6,8 +6,10 @@
         <div class="weui-panel__hd">
             @foreach($my_rss as $rss_push)
                 <div class="weui-media-box weui-media-box_text">
-                    <h4 class="weui-media-box__title">{{ $rss_push->rss->title }}</h4>
-                    <p class="weui-media-box__desc">{{ $rss_push->rss->summary }}</p>
+                    <a href="{{ $rss_push->rss->url }}">
+                        <h4 class="weui-media-box__title">{{ $rss_push->rss->title }}</h4>
+                        <p class="weui-media-box__desc">{{ $rss_push->rss->summary }}</p>
+                    </a>
                     <p class="weui-media-box__info">发布时间：{{ $rss_push->rss->pub_date }}</p>
                 </div>
             @endforeach
